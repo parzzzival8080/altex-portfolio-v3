@@ -2,7 +2,7 @@ export default {
     themes: {
         dark: false,
         light: {
-            primary: '#00695C',
+            primary: '#f8d94b',
         },
     },
 }

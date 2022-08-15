@@ -1,9 +1,9 @@
 <template>
-    <v-app>
+    <v-app style="background-color:#1f2630">
         <views-navigation :color="color" :flat="flat" />
         <div>
             <!-- ======= Hero Section ======= -->
-            <section class="hero-section" id="hero" v-if="!userId">
+            <section class="hero-section" id="hero"  v-if="!userId">
                 <v-container>
                     <v-row justify="center" class="align-items-center">
                         <v-col cols="12" xl="8" class="hero-text-image">
@@ -13,17 +13,27 @@
                                     lg="6"
                                     class="text-center text-lg-left"
                                 >
-                                    <h1 data-aos="fade-right">
-                                        HOSPITAL <strong>TRACKER</strong>
+                                    <h1 data-aos="fade-right" style="margin-top:50px" >
+                                        <strong style="color:white">Alt</strong><strong style="color:rgba(248,217,75, 0.8)">Ex</strong>
                                     </h1>
                                     <p
                                         class="mb-5"
                                         data-aos="fade-right"
                                         data-aos-delay="100"
+                                        style="color:white"
+                                        
                                     >
-                                        Discover the closest hospital near you.
+                                        Safe, Fast, and Concise
                                     </p>
-                                    <!-- <v-btn data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500" color="primary" size="100px" rounded x-large class="btn-primary">START THE TEST</v-btn> -->
+                                    <p
+                                        class="mb-5"
+                                        data-aos="fade-right"
+                                        data-aos-delay="100"
+                                        style="color:white"
+                                    >
+                                    Get it now!
+                                    </p>
+                                    <!-- <v-btn data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500" color="primary" size="100px" rounded x-large class="btn-primary"></v-btn> -->
                                     <p
                                         data-aos="fade-right"
                                         data-aos-delay="200"
@@ -31,17 +41,24 @@
                                     >
                                         <a
                                             class="btn btn-started"
-                                            @click="$vuetify.goTo('#search')"
-                                            >GET STARTED</a
+                                            style="color:white; background-color:#00a170"
+                                            @click="$router.push('/privacy-policy')"
+                                            >Google Play</a
+                                        >
+                                        <a
+                                            style="color:white; background-color:#0883fe"
+                                            class="btn btn-started"
+                                            @click="$router.push('/about')"
+                                            >App Store</a
                                         >
                                     </p>
                                 </v-col>
                                 <v-col
                                     cols="12"
                                     lg="6"
-                                    class="hidden-md-and-down"
-                                >
-                                    <img
+                                    class="hidden-md-and-down" >        
+                                        <img
+                                        width="500px"
                                         src="svg/Hero.svg"
                                         alt="Image"
                                         data-aos="fade-right"
