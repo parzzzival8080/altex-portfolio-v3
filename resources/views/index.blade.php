@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html style="color:#1f2630" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -28,7 +28,7 @@
             } */
         </style>
     </head>
-    <body>
+    <body >
         <div id="app">
             <router-view></router-view>
             <!-- <div id="preloader"></div> -->

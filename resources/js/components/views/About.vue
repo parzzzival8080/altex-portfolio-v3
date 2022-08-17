@@ -3,27 +3,7 @@
         <views-navigation :color="color" :flat="flat" />
         <div >
             <!-- ======= Hero Section ======= -->
-            <section class="hero-section" id="hero"  v-if="!userId">
-                <v-container>
-                    <v-row justify="center" class="align-items-center">
-                        <v-card style="background-color:#E3E6EB">
-                            <v-card-title>
-                                About us
-                            </v-card-title>
-                            <v-card-text >
-                                <h4 ></h4>
-                                <br style="color:454545"><br style="color:454545">If you have any questions about us, You can contact us:
-                                By email: <a href = "mailto: elprofessorcapone@gmail.com">elprofessorcapone@gmail.com</a> 
-                            </v-card-text>
-                        </v-card>
-                        <v-card>
-                            <v-card-text>
-                                
-                            </v-card-text>
-                        </v-card>
-                    </v-row>
-                </v-container>
-            </section>
+            
             <!-- End Hero -->
         </div>
         <v-scale-transition>
@@ -162,7 +142,6 @@ export default {
             this.color = "transparent";
             this.flat = true;
         }
-        this.getUserGeolocation();
         this.fetchHospitals();
     },
 };

@@ -103,9 +103,9 @@
                     id="no-background-hover"
                     text
                     v-if="!userId"
-                    to="/privacy-policy"
+                    to="#company"
                 >
-                    <span class="mr-2" style="color:rgba(248,217,75, 0.8)">Privacy Policy</span>
+                    <span class="mr-2" style="color:rgba(248,217,75, 0.8)">Company</span>
                 </v-btn>
                 <v-btn
                     :ripple="false"
@@ -113,9 +113,9 @@
                     
                     text
                     v-if="!userId"
-                    to="/about"
+                    to="#privacy"
                 >
-                    <span class="mr-2" style="color:rgba(248,217,75, 0.8)">About</span>
+                    <span class="mr-2" style="color:rgba(248,217,75, 0.8)">Privacy Policy</span>
                 </v-btn>
             </div>
         </v-app-bar>

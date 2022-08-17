@@ -1,31 +1,31 @@
 <template>
-    <v-app >
+    <v-app style="color:#1f2630;height:300px" >
         <views-navigation :color="color" :flat="flat" />
         <div >
-            <!-- ======= Hero Section ======= -->
-            <section class="hero-section" id="hero"  v-if="!userId">
+            <section style="background-color:#1f2630" class="hero-section" id="privacy"  v-if="!userId">
                 <v-container>
                     <v-row justify="center" class="align-items-center">
-                        <v-card style="background-color:#E3E6EB">
-                            <v-card-title>
-                                PRIVACY POLICY
-                            </v-card-title>
-                            <v-card-text >
-                                <h4 >Last updated: March 05, 2021</h4>
+                        
+                                <center><h3 style="color: rgba(248, 217, 75, 0.8);">Privacy Policy</h3></center> 
+                           
+                                <h4 style="color: rgba(248, 217, 75, 0.8);">Last updated: March 05, 2021</h4>
 
-                                This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+
+
+
+                               <span style="color:white">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
 
                                 We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.
 
                                 Interpretation and Definitions
 
-                                <h4 style="margin-top:10px">Interpretation</h4>
+                                <h4 style="color: rgba(248, 217, 75, 0.8); margin-top:10px ">Interpretation</h4>
 
                                 The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
 
-                                <h4 style="margin-top:10px">Definitions</h4>
+                                <h4 style="color: rgba(248, 217, 75, 0.8); margin-top:10px ">Definitions</h4>
 
-                               <h5 style="margin-top:10px"> For the purposes of this Privacy Policy:</h5>
+                               <h5 style="color: rgba(248, 217, 75, 0.8);margin-top:10px"> For the purposes of this Privacy Policy:</h5>
 
                                 Account means a unique account created for You to access our Service or parts of our Service.
 
@@ -51,11 +51,11 @@
 
                                 <br style="color:454545"><br style="color:454545">You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
 
-                                <h4 style="margin-top:10px">Collecting and Using Your Personal Data</h4>
+                                <h4 style="color: rgba(248, 217, 75, 0.8); margin-top:10px ">Collecting and Using Your Personal Data</h4>
 
-                                <h4 style="margin-top:10px">Types of Data Collected</h4>
+                                <h4 style="color: rgba(248, 217, 75, 0.8); margin-top:10px ">Types of Data Collected</h4>
 
-                                <h5 style="margin-top:10px">Personal Data</h5>
+                                <h5 style="color: rgba(248, 217, 75, 0.8);margin-top:10px">Personal Data</h5>
 
                                 While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
 
@@ -73,7 +73,7 @@
 
                                 <br style="color:454545"><br style="color:454545">We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
 
-                                <h4 style="margin-top:10px">Information Collected while Using the Application</h4>
+                                <h4 style="color: rgba(248, 217, 75, 0.8); margin-top:10px ">Information Collected while Using the Application</h4>
 
                                 <br style="color:454545"><br style="color:454545">While using Our Application, in order to provide features of Our Application, We may collect, with Your prior permission:
 
@@ -83,7 +83,7 @@
 
                                 <br style="color:454545"><br style="color:454545">You can enable or disable access to this information at any time, through Your Device settings.
 
-                                <h5 style="margin-top:10px">Use of Your Personal Data</h5>
+                                <h5 style="color: rgba(248, 217, 75, 0.8);margin-top:10px">Use of Your Personal Data</h5>
 
                                 <br style="color:454545"><br style="color:454545">The Company may use Personal Data for the following purposes:
 
@@ -172,16 +172,11 @@
                                 <br style="color:454545"><br style="color:454545">If you have any questions about this Privacy Policy, You can contact us:
 
                                 By email: <a href = "mailto: elprofessorcapone@gmail.com">elprofessorcapone@gmail.com</a> 
-                            </v-card-text>
-                        </v-card>
-                        <v-card>
-                            <v-card-text>
-                                
-                            </v-card-text>
-                        </v-card>
+                                </span> 
                     </v-row>
                 </v-container>
             </section>
+           
             <!-- End Hero -->
         </div>
         <v-scale-transition>
@@ -340,7 +335,6 @@ export default {
             this.color = "transparent";
             this.flat = true;
         }
-        this.getUserGeolocation();
         this.fetchHospitals();
     },
 };
