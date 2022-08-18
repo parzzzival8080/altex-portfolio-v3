@@ -433,6 +433,140 @@
 
             </section>
 
+            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+                <v-container>
+                    <v-row justify="center" class="align-items-center">
+                        <v-row>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">Meet the Team</h3>
+                        <br><span style="color:white">AltEx is the world's first open digital asset trading platform. Preparations began in 2014, after 7 years of continuous development and testing.</span></center>
+                            <v-col cols="12" md="3">
+                                <img
+                                        width="400px"
+                                        src="svg/partner-md-a.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        <v-col cols="12" md="3" style="color:white; ">
+                              <img
+                                        width="400px"
+                                        src="svg/partner-md-b.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />   
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                 <img
+                                        width="400px"
+                                        src="svg/partner-md-c.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+
+                        <v-col cols="12" md="3">
+                                 <img
+                                        width="400px"
+                                        src="svg/partner-md-d.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                <img
+                                        width="400px"
+                                        src="svg/partner-md-e.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        <v-col cols="12" md="3" style="color:white; ">
+                              <img
+                                        width="400px"
+                                        src="svg/partner-sm-a.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />   
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                 <img
+                                        width="400px"
+                                        src="svg/partner-sm-b.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+
+                        <v-col cols="12" md="3">
+                                 <img
+                                        width="400px"
+                                        src="svg/partner-sm-c.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                <img
+                                        width="400px"
+                                        src="svg/partner-sm-d.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        <v-col cols="12" md="3" style="color:white; ">
+                              <img
+                                        width="400px"
+                                        src="svg/partner-xs-a.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />   
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                 <img
+                                        width="400px"
+                                        src="svg/partner-xs-b.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+
+                        <v-col cols="12" md="3">
+                                 <img
+                                        width="400px"
+                                        src="svg/partner-xs-c.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                <img
+                                        width="400px"
+                                        src="svg/partner-xs-d.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        <v-col cols="12" md="3" style="color:white; ">
+                              <img
+                                        width="400px"
+                                        src="svg/partner-xs-e.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />   
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                 <img
+                                        width="400px"
+                                        src="svg/partner-xs-f.png"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </v-col>
+                        </v-row>
+                    </v-row>
+                </v-container> 
+            </section>
+
             <section style="background-color:#1f2630" class="hero-section" id="company"  v-if="!userId">
                 <v-container>   
                     <v-row>
