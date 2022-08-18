@@ -58,7 +58,7 @@
                                     lg="6"
                                     class="hidden-md-and-down" >        
                                         <img
-                                        width="500px"
+                                        width="100%"
                                         src="svg/Hero.svg"
                                         alt="Image"
                                         data-aos="fade-right"
@@ -168,7 +168,8 @@
                                 </v-row>
                             </v-col>
                                 <v-col cols="12" md="6" style="color:white;" >
-                                <v-row>  
+                                <v-row>
+                                
                                     <v-col cols="12" md="3">
                                         <img
                                         width="100px"
@@ -436,131 +437,197 @@
             <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
                 <v-container>
                     <v-row justify="center" class="align-items-center">
+                    
                         <v-row>
-                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">Meet the Team</h3>
-                        <br><span style="color:white">AltEx is the world's first open digital asset trading platform. Preparations began in 2014, after 7 years of continuous development and testing.</span></center>
-                            <v-col cols="12" md="3">
+
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">Cooperative Agency</h3>
+                        </center>   
+                            <v-col cols="12" md="2">
+                            <center>
                                 <img
-                                        width="400px"
+                                        width="120%"
                                         src="svg/partner-md-a.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                            </center>
+                                
                         </v-col>
-                        <v-col cols="12" md="3" style="color:white; ">
-                              <img
-                                        width="400px"
+                        <v-col cols="12" md="2" style="color:white; ">
+                            <center>
+                            <img
+                                        width="120%"
                                         src="svg/partner-md-b.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />   
+                                    </center>
+                              
                         </v-col>
-                        <v-col cols="12" md="3">
-                                 <img
-                                        width="400px"
+                        <v-col cols="12" md="2">
+                        <center>
+                            <img
+                                        width="120%"
                                         src="svg/partner-md-c.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </center>
+                                 
                         </v-col>
 
-                        <v-col cols="12" md="3">
-                                 <img
-                                        width="400px"
+                        <v-col cols="12" md="2">
+                            <center>
+                                <img
+                                        width="120%"
                                         src="svg/partner-md-d.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                            </center>
+                                 
                         </v-col>
-                        <v-col cols="12" md="3">
-                                <img
-                                        width="400px"
+                        <v-col cols="12" md="2">
+                        <center>
+                            <img
+                                        width="120%"
                                         src="svg/partner-md-e.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </center>
+                                
                         </v-col>
-                        <v-col cols="12" md="3" style="color:white; ">
-                              <img
-                                        width="400px"
+                        
+                        </v-row>
+                    
+                        
+                    </v-row>
+                </v-container> 
+            </section>
+
+            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+                <v-container>
+                    <v-row justify="center" class="align-items-center">
+
+                        <v-row>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">Advisory body</h3>
+                        <br></center>
+                        <v-col cols="12" md="2" style="color:white; ">
+                        <center>
+                            <img
+                                        width="50%"
                                         src="svg/partner-sm-a.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />   
+                        </center>
+                              
                         </v-col>
-                        <v-col cols="12" md="3">
-                                 <img
-                                        width="400px"
+                        
+                        
+                        <v-col cols="12" md="2">
+                        <center>
+                            <img
+                                        width="50%"
                                         src="svg/partner-sm-b.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </center>
+                                 
                         </v-col>
 
-                        <v-col cols="12" md="3">
-                                 <img
-                                        width="400px"
+                        <v-col cols="12" md="2" lg="2">
+                        <center>
+                        <img
+                                        width="50%"
                                         src="svg/partner-sm-c.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </center>
+                                 
                         </v-col>
-                        <v-col cols="12" md="3">
-                                <img
-                                        width="400px"
+                        <v-col cols="12" md="2">
+                         <center>
+                         <img
+                                        width="50%"
                                         src="svg/partner-sm-d.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </center>
+                                
                         </v-col>
-                        <v-col cols="12" md="3" style="color:white; ">
-                              <img
-                                        width="400px"
+                        <v-col cols="12" md="2" style="color:white; ">
+                        <center>
+                            <img
+                                        width="50%"
                                         src="svg/partner-xs-a.png"
                                         alt="Image"
                                         data-aos="fade-right"
-                                    />   
+                                    /> 
+                        </center>
+                                
                         </v-col>
-                        <v-col cols="12" md="3">
-                                 <img
-                                        width="400px"
+                        <v-col cols="12" md="2">
+                        <center>
+                            <img
+                                        width="50%"
                                         src="svg/partner-xs-b.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </center>
+                                 
+                        </v-col>
+                        <v-col cols="12" md="2">
+                        
                         </v-col>
 
-                        <v-col cols="12" md="3">
-                                 <img
-                                        width="400px"
+                        <v-col cols="12" md="2">
+                            <center>
+                                <img
+                                        width="50%"
                                         src="svg/partner-xs-c.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                            </center>
+                                 
                         </v-col>
-                        <v-col cols="12" md="3">
+                        <v-col cols="12" md="2">
+                        <center>
                                 <img
-                                        width="400px"
+                                        width="50%"
                                         src="svg/partner-xs-d.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                                </center>
                         </v-col>
-                        <v-col cols="12" md="3" style="color:white; ">
-                              <img
-                                        width="400px"
+                        
+                        <v-col cols="12" md="2" style="color:white; ">
+                        <center>
+                            <img
+                                        width="50%"
                                         src="svg/partner-xs-e.png"
                                         alt="Image"
                                         data-aos="fade-right"
-                                    />   
+                                    />
+                        </center>
                         </v-col>
-                        <v-col cols="12" md="3">
-                                 <img
-                                        width="400px"
+                        <v-col cols="12" md="2">
+                        <center>
+                            <img
+                                        width="50%"
                                         src="svg/partner-xs-f.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </center>
+                                 
                         </v-col>
                         </v-row>
                     </v-row>
