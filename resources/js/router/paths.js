@@ -5,6 +5,8 @@ import Signin from "../components/views/Signin.vue";
 import Signup from "../components/views/Signup.vue";
 import Pusher from '../components/views/Pusher.vue';
 
+import Sample from '../components/views/Sample.vue'
+
 const routes = [
   {
     path: "/",
@@ -39,7 +41,13 @@ const routes = [
       path: "/pusher",
       name: "Pusher",
       component: Pusher
-  }
+  },
+
+  {
+    path: "/sample",
+    name: "Sample",
+    component: Sample
+}
 ];
 
 export default routes;

@@ -24,12 +24,6 @@
     </v-app>
 </template>
 
-<style>
-    br
-    {
-
-    }
-</style>
 
 <script>
 export default {

@@ -2,4 +2,9 @@
 
 Route::get('{any}', function () {
     return view('index');
-})->where('any', '.*');
+})->where('any','.*');
+
+// Route::get('/samplePrivacy', function ()
+// {
+//     return view('privacy');
+// });

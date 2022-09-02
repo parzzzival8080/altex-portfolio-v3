@@ -1,5 +1,5 @@
 <template>
-    <v-app >
+    <v-app>
         <views-navigation :color="color" :flat="flat" />
         <div>
             <!-- ======= Hero Section ======= -->
@@ -23,7 +23,7 @@
                                         style="color:white"
                                         
                                     >
-                                        Safe, Fast, and Concise
+                                        {{myJson.tagline}}
                                     </p>
                                     <p
                                         class="mb-5"
@@ -31,7 +31,7 @@
                                         data-aos-delay="100"
                                         style="color:white"
                                     >
-                                    Get it now!
+                                    {{myJson.getItNow}}
                                     </p>
                                     <!-- <v-btn data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500" color="primary" size="100px" rounded x-large class="btn-primary"></v-btn> -->
                                     <p
@@ -41,8 +41,9 @@
                                     >
                                         <a
                                             class="btn btn-started"
+                                            data-aos="fade-up"
                                             style="color:white; background-color:#00a170"
-                                            @click="$router.push('/#')"
+                                            href="https://play.google.com/store/apps/details?id=com.altex"
                                             >Google Play</a
                                         >
                                         <a
@@ -71,54 +72,54 @@
             </section>
             <!-- End Hero -->
 
-            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+            <section style="background-color:#1f2630" id="about"  v-if="!userId">
                 <v-container>
                     <v-row justify="center" class="align-items-center">
                         <v-row>
-                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">START YOUR CRYPTO JOURNEY WITH US</h3>
-                        <br><span style="color:white">AltEx is the world's first open digital asset trading platform. Preparations began in 2014, after 7 years of continuous development and testing.</span></center>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">{{myJson.aboutTitle}}</h3>
+                        <br><span style="color:white">{{myJson.about_tagline}}</span></center>
                             <v-col style="margin-left:10%">
-                            <img
-                                        width="500px"
+                            <img style="margin-top:40px"
+                                        width="100%"
                                         src="svg/btc.svg"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
                         </v-col>
                         <v-col cols="12" md="6" style="color:white; ">
-                                <v-row style="margin-bottom:40px">  
+                                <v-row style="margin-top:40px">  
                                     <v-col cols="12" md="3">
                                         <img
-                                        width="100px"
+                                        width="50%"
                                         src="svg/globe.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
                                     </v-col>
                                     <v-col cols="12" md="9" >
-                                        <span>Obtained a Serbian business license, led the innovation of blockchain technology, and promoted the global industrialization of blockchain technology.</span>
+                                        <span>{{myJson.about_description_1}}</span>
                                     </v-col>
                                     <v-col cols="12" md="3">
                                         <img
-                                        width="100px"
+                                        width="50%"
                                         src="svg/gem.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     >
                                     </v-col>
                                     <v-col cols="12" md="9">
-                                        <span>Headquartered in Serbia, it has independent trading business and operation centers in San Francisco, London, Osaka, Paris, Singapore and other countries and regions.</span>
+                                        <span>{{myJson.about_description_2}}</span>
                                     </v-col>
                                     <v-col cols="12" md="3">
                                         <img
-                                        width="100px"
+                                        width="50%"
                                         src="svg/networking.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
                                     </v-col>
                                     <v-col cols="12" md="9">
-                                        <span>In line with ending chaos in the industry, formulating industry rules, and guiding the vision of healthy development of the industry, we hired the original IBM technical team to create the world's first securities-level trading platform, committed to providing users with safe, convenient, fair and just digital assets Trading experience.</span>
+                                        <span>{{myJson.about_description_3}}</span>
                                     </v-col>
                                 </v-row>
                         </v-col>
@@ -129,41 +130,41 @@
 
             </section>
 
-            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+            <section style="background-color:#1f2630" id="about"  v-if="!userId">
                 <v-container>
                     <v-row justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8); ">
                         <v-row style="margin-bottom:50px">
-                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8); ">CORE ADVANTAGES</h3>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8); ">{{myJson.about_title_2}}</h3>
                         <br><span style="color:white"></span></center>
                             <v-col style="color:white;">
                                 <v-row>  
                                     <v-col cols="12" md="3">
                                         <img
-                                        width="100px"
+                                        width="50%"
                                         src="svg/computer.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
                                     </v-col>
                                     <v-col cols="12" md="9">
-                                            <h4 style="color:rgba(248,217,75, 0.8)">Safety</h4>
-                                            <span><br/>1. Based on the IBM enterprise-level security architecture, using multi-layer hardware isolation
-                                                <br/>2. A 24-hour real-time early warning system detects potential cyber attacks
-                                                <br/>3. Use the world's leading security protection services outside the system
-                                                <br/>4. Use multiple network isolation inside the system to prevent intrusion</span>
+                                            <h4 style="color:rgba(248,217,75, 0.8)">{{myJson.about_safety}}</h4>
+                                            <span><br/>{{myJson.about_safety_desc_1}}
+                                                <br/>{{myJson.about_safety_desc_2}}
+                                                <br/>{{myJson.about_safety_desc_3}}
+                                                <br/>{{myJson.about_safety_desc_4}}</span>
                                     </v-col>
                                     <v-col cols="12" md="3">
                                         <img
-                                        width="100px"
+                                        width="50%"
                                         src="svg/bitcoin.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     >
                                     </v-col>
                                     <v-col cols="12" md="9">
-                                        <h4 style="color:rgba(248,217,75, 0.8)">Globalization</h4>
-                                        <span><br/>1. Uninterrupted operation of global distributed servers
-                                               <br/>2. Global multilingual, multi-regional, multi-currency support</span>
+                                        <h4 style="color:rgba(248,217,75, 0.8)">{{myJson.about_globalization}}</h4>
+                                        <span><br/>{{myJson.about_globalization_desc_1}}
+                                               <br/>{{myJson.about_globalization_desc_2}}</span>
                                     </v-col>
                                 </v-row>
                             </v-col>
@@ -172,17 +173,17 @@
                                 
                                     <v-col cols="12" md="3">
                                         <img
-                                        width="100px"
+                                        width="50%"
                                         src="svg/computer.png"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
                                     </v-col>
                                     <v-col cols="12" md="9">
-                                        <h4 style="color:rgba(248,217,75, 0.8);">High Concurrency</h4>
-                                        <span>1. The most advanced distributed system design
-                                            2. Dynamically adjust hardware resources according to load conditions
-                                            3. Support real-time online transactions for millions of users</span>
+                                        <h4 style="color:rgba(248,217,75, 0.8);">{{myJson.about_high_concurrency}}</h4>
+                                        <span>{{myJson.about_high_concurrency_desc_1}}
+                                            <br/>{{myJson.about_high_concurrency_desc_2}}
+                                            <br/>{{myJson.about_high_concurrency_desc_3}}</span>
                                     </v-col>
                                     <v-col cols="12" md="3" style="margin-top:80px">
                                         <img
@@ -193,10 +194,10 @@
                                     >
                                     </v-col>
                                     <v-col cols="12" md="9">
-                                    <h4 style="color:rgba(248,217,75, 0.8); margin-top:80px">Saving Money</h4>
-                                        <span><br/>1. Provide millisecond-level accurate pen, time, and snapshot data
-                                                <br/>2. Provide streaming data subscription interface for institutional investors
-                                                <br/>3. Real-time remote backup to ensure data security</span>
+                                    <h4 style="color:rgba(248,217,75, 0.8); margin-top:80px">{{myJson.about_saving_money}}</h4>
+                                        <span><br/>{{myJson.about_saving_money_desc_1}}
+                                                <br/>{{myJson.about_saving_money_desc_2}}
+                                                <br/>{{myJson.about_saving_money_desc_3}}</span>
                                     </v-col>
                                 </v-row>
                         </v-col>
@@ -205,27 +206,22 @@
                 </v-container>
             </section>
 
-            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+            <section style="background-color:#1f2630" id="about"  v-if="!userId">
                 <v-container>                   
                     <v-row justify="center" class="align-items-center">
                         <v-col style="margin-left:10%">
                             <img
-                                        width="500px"
+                                        width="80%"
                                         src="svg/about.svg"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
                         </v-col>
                         <v-col cols="12" md="6" style="color:white">
-                        <center><h3 style="margin-bottom:10px;color:rgba(248,217,75, 0.8)">About Us</h3></center> 
+                        <center><h3 style="margin-bottom:10px;color:rgba(248,217,75, 0.8)">{{myJson.about_us}}</h3></center> 
                                 <v-row>  
                                     <span style="font-size:1em;margin-bottom:10px">
-                                    AltEx is an investment platform where we grow your cryptocurrencies. It is committed in creating the most secure, stable and efficient digital currency trading platform for users around the world.
-                                    AltEx is a reliable app. AltEx means Network AltEx its core team comes from a well-known Internet and Financial companies in the world, including many of the practioners and investors in the digital currency industry. AltEx, a safe, fast and concise trading platfrom for cryptocurrency trading
-                                    Our company Network AltEx comes from well-known Internet and financial companies in the world, including many of the earliest practitioners and investors in the digital currency industry.
-                                    Our company Network AltEx comes from well-known Internet and financial companies in the world, including many of the earliest practitioners and investors in the digital currency industry.
-                                    Our platform focuses on allowing people to rent a mining rig that produces Doge and BTC coins. And there are also other investment plan that you can avail.
-                                    AltEx is an investment platform where we grow your cryptocurrencies. It is committed in creating the most secure, stable and efficient digital currency trading platform for users around the world. </span>
+                                     {{myJson.about_us_desc}}</span>
                                 </v-row>
                         </v-col>
                     </v-row>
@@ -233,200 +229,160 @@
 
             </section>
             <!-- ======= Hero Section ======= -->
-             <section style="background-color:#1f2630" class="hero-section" id="company"  v-if="!userId">
+             <section style="background-color:#1f2630" id="company"  v-if="!userId">
                 <v-container>                   
                     <v-row justify="center" class="align-items-center">      
                         <v-col cols="12" md="6" style="color:white">
-                        <center><h3 style="margin-bottom:10px;color:rgba(248,217,75, 0.8)">Company</h3></center> 
+                        <center><h3 style="margin-bottom:10px;color:rgba(248,217,75, 0.8)">{{myJson.about_company}}</h3></center> 
                                 <v-row>  
                                     <v-col cols="12" md="6" style="margin-top:20px">  
                                         <ul style="margin-left:25%;color:white">
-                                        <li><h5 style="color:white">6 Years
-                                            <br/>Blockchain industry experience</h5>
+                                        <li><h5 style="color:white">{{myJson.about_company_1}}</h5>
                                         </li>                                        
-                                        <li><h5 style="color:white">201 people
-                                            <br>Technical team</h5>
+                                        <li><h5 style="color:white">{{myJson.about_company_2}}</h5>
                                         </li>
-                                        <li><h5 style="color:white">2000
-                                            <br>Cooperative agency</h5>
+                                        <li><h5 style="color:white">{{myJson.about_company_3}}</h5>
                                         </li>   
                                     </ul>  
                                     </v-col>
                                     <v-col cols="12" md="6" style="margin-top:20px">
                                         
                                         <ul style="margin-left:25%">
-                                        <li><h5 style="color:white">4 years
-                                            <br>Practical experience in security system operation</h5>
+                                        <li><h5 style="color:white">{{myJson.about_company_4}}</h5>
                                         </li>
-                                        <li><h5 style="color:white">2014 people
-                                            <br>Established</h5>
+                                        <li><h5 style="color:white">{{myJson.about_company_5}}</h5>
                                         </li>
-                                        <li><h5 style="color:white">52
-                                            <br>Branch</h5>
+                                        <li><h5 style="color:white">{{myJson.about_company_6}}</h5>
                                         </li>
                                     </ul>        
                                     </v-col>
                                 </v-row>
                         </v-col>
-                        <v-col style="margin-left:10%">
+                        <v-col style="margin-left:10%;margin-bottom:20px">
                             <img
-                                        width="500px"
+                                        width="60%"
                                         src="svg/company.svg"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />
+                        </v-col >
+
+                        <v-row justify="center" class="align-items-center">
+                        <v-row>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8);">Altex Timeline</h3>
+                        </center>   
+                            <v-col>
+                            <center>
+                                    <v-stepper value="7" style="background-color:#1f2630; color:white">
+                                        <v-stepper-header>
+                                        <v-stepper-step
+                                            step="1"
+                                            complete
+                                        >
+                                            <span style=" color:white">2015.05</span>
+                                            <small style="color:rgba(248,217,75, 0.8)">{{myJson.about_timeline_1}}</small>
+                                        </v-stepper-step>
+
+                                        <v-divider></v-divider>
+
+                                        <v-stepper-step step="2" complete>
+                                            <span style=" color:white">2016.02</span>
+                                            <small style="color:rgba(248,217,75, 0.8)">{{myJson.about_timeline_2}}</small>
+                                        </v-stepper-step>
+                                        <v-divider></v-divider>
+                                        <v-stepper-step step="3" complete>
+                                            <span style="color:white">2017.03</span>
+                                            <small style="color:rgba(248,217,75, 0.8)">{{myJson.about_timeline_3}}</small>
+                                        </v-stepper-step>
+                                        <v-divider></v-divider>
+                                        <v-stepper-step step="4" complete>
+                                            <span style=" color:white">2018.02</span>
+                                            <small style="color:rgba(248,217,75, 0.8)">{{myJson.about_timeline_4}}</small>
+                                        </v-stepper-step>
+                                        <v-divider></v-divider>
+                                        <v-stepper-step step="5" complete>
+                                            <span style=" color:white">2019.08</span>
+                                            <small style="color:rgba(248,217,75, 0.8)">{{myJson.about_timeline_5}}</small>
+                                        </v-stepper-step>
+                                        <v-divider></v-divider>
+                                        <v-stepper-step step="6" complete>
+                                            <span style=" color:white">2020.12</span>
+                                            <small style="color:rgba(248,217,75, 0.8)">{{myJson.about_timeline_6}}</small>
+                                        </v-stepper-step>
+                                        <v-divider></v-divider>
+                                        <v-stepper-step step="7" complete>
+                                           <span style=" color:white">2021.12</span>
+                                           <small style="color:rgba(248,217,75, 0.8)">{{myJson.about_timeline_7}}</small>
+                                        </v-stepper-step>
+                                        </v-stepper-header>
+                                    </v-stepper>
+                            </center>
+                                
                         </v-col>
+                        
+                        
+                        </v-row>
+                    
+                        
+                    </v-row>
                     </v-row>
                 </v-container>
             </section>
 
-            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+            <section style="background-color:#1f2630" class="hero-section" id="team"  v-if="!userId">
                 <v-container>
                     <v-row justify="center" class="align-items-center">
                         <v-row>
-                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">Meet the Team</h3>
-                        <br><span style="color:white">AltEx is the world's first open digital asset trading platform. Preparations began in 2014, after 7 years of continuous development and testing.</span></center>
-                            <v-col cols="12" md="4">
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">{{myJson.meet_the_team}}</h3>
+                        <br><span style="color:rgba(248,217,75, 0.8)">{{myJson.meet_the_team_founders}}</span></center>
+                        <v-col ></v-col>
+                        
+                        <v-col >
+                        <center>
                             <v-card
-                                            class="mx-auto"
-                                            max-width="344"
+                                            
+                                            max-width="240"
+                                            max-height="0"
+                                            color="#1f2630"
                                         >
                                             <v-img
-                                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                                            height="200px"
+                                            src="svg/1st.svg"
+                                            height="20%"
                                             ></v-img>
-
-                                            <v-card-title>
-                                            John Doe
-                                            </v-card-title>
-
-                                            <v-card-subtitle>
-                                            Lorem Ipsum
-                                            </v-card-subtitle>
-
-                                            <v-card-actions>
-                                            <v-btn
-                                                color="orange lighten-2"
-                                                text
-                                            >
-                                                Explore
-                                            </v-btn>
-
-                                            <v-spacer></v-spacer>
-
-                                            <v-btn
-                                                icon
-                                                @click="show = !show"
-                                            >
-                                                <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                                            </v-btn>
-                                            </v-card-actions>
-
-                                            <v-expand-transition>
-                                            <div v-show="show">
-                                                <v-divider></v-divider>
-
-                                                <v-card-text>
-                                                I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-                                                </v-card-text>
-                                            </div>
-                                            </v-expand-transition>
-                                        </v-card>
+                            </v-card>
+                        </center>
                         </v-col>
-                        <v-col cols="12" md="4" style="color:white; ">
+                        <v-col  style="color:white; ">
+                        <center>
+                            <v-card
+                                           max-width="240"
+                                            max-height="0"
+                                            color="#1f2630"
+                                        >
+                                            <v-img
+                                            src="svg/2nd.svg"
+                                            height="20%"
+                                            ></v-img>
+                            </v-card>
+                        </center>      
+                        </v-col>
+                        <v-col >
                                 <v-card
                                             class="mx-auto"
-                                            max-width="344"
+                                            max-width="240"
+                                            max-height="0"
+                                            color="#1f2630"
                                         >
                                             <v-img
-                                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                                            height="200px"
+                                            src="svg/3rd.svg"
+                                            height="20%"
                                             ></v-img>
-
-                                            <v-card-title>
-                                            John Doe
-                                            </v-card-title>
-
-                                            <v-card-subtitle>
-                                            Lorem Ipsum
-                                            </v-card-subtitle>
-
-                                            <v-card-actions>
-                                            <v-btn
-                                                color="orange lighten-2"
-                                                text
-                                            >
-                                                Explore
-                                            </v-btn>
-
-                                            <v-spacer></v-spacer>
-
-                                            <v-btn
-                                                icon
-                                                @click="show = !show"
-                                            >
-                                                <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                                            </v-btn>
-                                            </v-card-actions>
-
-                                            <v-expand-transition>
-                                            <div v-show="show">
-                                                <v-divider></v-divider>
-
-                                                <v-card-text>
-                                                I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-                                                </v-card-text>
-                                            </div>
-                                            </v-expand-transition>
-                                        </v-card>
+                            </v-card>
                         </v-col>
-                        <v-col cols="12" md="4">
-                                <v-card
-                                            class="mx-auto"
-                                            max-width="344"
-                                        >
-                                            <v-img
-                                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                                            height="200px"
-                                            ></v-img>
-
-                                            <v-card-title>
-                                            John Doe
-                                            </v-card-title>
-
-                                            <v-card-subtitle>
-                                            Lorem Ipsum
-                                            </v-card-subtitle>
-
-                                            <v-card-actions>
-                                            <v-btn
-                                                color="orange lighten-2"
-                                                text
-                                            >
-                                                Explore
-                                            </v-btn>
-
-                                            <v-spacer></v-spacer>
-
-                                            <v-btn
-                                                icon
-                                                @click="show = !show"
-                                            >
-                                                <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                                            </v-btn>
-                                            </v-card-actions>
-
-                                            <v-expand-transition>
-                                            <div v-show="show">
-                                                <v-divider></v-divider>
-
-                                                <v-card-text>
-                                                I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-                                                </v-card-text>
-                                            </div>
-                                            </v-expand-transition>
-                                        </v-card>
-                        </v-col>
+                        <v-col></v-col>
+                        </v-row>
+                        <v-row>
+                        <v-col ></v-col>
                         </v-row>
                     </v-row>
                 
@@ -434,15 +390,81 @@
 
             </section>
 
-            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+            <section style="background-color:#1f2630" class="hero-section" id="team"  v-if="!userId">
+                <v-container>
+                    <v-row justify="center" class="align-items-center">
+                        <v-row>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">{{myJson.meet_the_team}}</h3>
+                        <br><span style="color:rgba(248,217,75, 0.8)">{{myJson.meet_the_team_developers}}</span></center>
+                        <v-col cols="12" md="3">
+                        <v-card
+                                            class="mx-auto"
+                                            max-width="240"
+                                            max-height="0"
+                                            color="#1f2630"
+                                        >
+                                            <v-img
+                                            src="svg/4th.svg"
+                                            height="20%"
+                                            ></v-img>
+                            </v-card>
+                            </v-col>
+                        <v-col cols="12" md="3">
+                            <v-card
+                                            class="mx-auto"
+                                                max-width="240"
+                                                max-height="0"
+                                            color="#1f2630"
+                                        >
+                                            <v-img
+                                            src="svg/5th.svg"
+                                            height="20%"
+                                            ></v-img>
+                            </v-card>
+                        </v-col>
+                        <v-col  style="color:white; " cols="12" md="3">
+                                <v-card
+                                            class="mx-auto"
+                                                max-width="240"
+                                                max-height="0"
+                                            color="#1f2630"
+                                        >
+                                            <v-img
+                                            src="svg/6th.svg"
+                                            height="20%"
+                                            ></v-img>
+                            </v-card>
+                        </v-col>
+                        <v-col cols="12" md="3">
+                                <v-card
+                                            class="mx-auto"
+                                                max-width="240"
+                                                max-height="0"
+                                            color="#1f2630"
+                                        >
+                                            <v-img
+                                            src="svg/7th.svg"
+                                            height="20%"
+                                            ></v-img>
+                            </v-card>
+                            </v-col>
+                        </v-row>
+                    </v-row>
+                
+                </v-container>
+
+            </section>
+
+            <section style="background-color:#1f2630" class="hero-section" id="agency"  v-if="!userId">
                 <v-container>
                     <v-row justify="center" class="align-items-center">
                     
                         <v-row>
 
-                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">Cooperative Agency</h3>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">{{myJson.cooperative_agency}}</h3>
                         </center>   
-                            <v-col cols="12" md="2">
+                        <v-col></v-col>
+                            <v-col>
                             <center>
                                 <img
                                         width="120%"
@@ -453,7 +475,7 @@
                             </center>
                                 
                         </v-col>
-                        <v-col cols="12" md="2" style="color:white; ">
+                        <v-col style="color:white; ">
                             <center>
                             <img
                                         width="120%"
@@ -464,7 +486,7 @@
                                     </center>
                               
                         </v-col>
-                        <v-col cols="12" md="2">
+                        <v-col>
                         <center>
                             <img
                                         width="120%"
@@ -476,7 +498,7 @@
                                  
                         </v-col>
 
-                        <v-col cols="12" md="2">
+                        <v-col >
                             <center>
                                 <img
                                         width="120%"
@@ -498,21 +520,34 @@
                         </center>
                                 
                         </v-col>
-                        
+                        <v-col cols="12" md="2">
+                        <center>
+                            <img
+                                        width="200%"
+                                        src="svg/logo-5th.svg"
+                                        alt="Image"
+                                        data-aos="fade-right"
+                                    />
+                        </center>
+                                
+                        </v-col>
                         </v-row>
-                    
                         
+
+                         
                     </v-row>
                 </v-container> 
+
+                
             </section>
 
-            <section style="background-color:#1f2630" class="hero-section" id="about"  v-if="!userId">
+            <section style="background-color:#1f2630" class="hero-section" id="agency"  v-if="!userId">
                 <v-container>
-                    <v-row justify="center" class="align-items-center">
-
+                    <v-row justify="center" class="align-items-center">         
                         <v-row>
-                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">Advisory body</h3>
+                        <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)" >{{myJson.advisory_body}}</h3>
                         <br></center>
+                        
                         <v-col cols="12" md="2" style="color:white; ">
                         <center>
                             <img
@@ -607,7 +642,6 @@
                                     />
                                 </center>
                         </v-col>
-                        
                         <v-col cols="12" md="2" style="color:white; ">
                         <center>
                             <img
@@ -630,81 +664,29 @@
                                  
                         </v-col>
                         </v-row>
+
                     </v-row>
                 </v-container> 
+
+                
             </section>
 
-            <section style="background-color:#1f2630" class="hero-section" id="company"  v-if="!userId">
-                <v-container>   
-                    <v-row>
-                        <v-col>
-                        
-                        </v-col>
-                        <v-col>
-                            <div class="bg-gradient_solid">
-                        <div class="container">
-                            <div class="section-header">
-                            <strong style="color:rgba(248,217,75, 0.8); font-size:3em">Circuit Diagram</strong>
-                            <hr>
-                            </div>
-                            <div class="steps">
-                            <div class="steps-container">
-                                <div class="content">
-                                <h2></h2>
-                                <p>AltEx takes shape</p>
-                                </div>
-                                <i class="step-line"></i>
-                                <div class="date">2015.05</div>
-                            </div>
-                            <div class="steps-container">
-                                <div class="content">
-                                <h2></h2>
-                                <p>AltEx core logic design completed</p>
-                                </div>
-                                <i class="step-line"></i>
-                                <div class="date">2016.02</div>
-                            </div>
-                            <div class="steps-container">
-                                <div class="content">
-                                <h2></h2>
-                                <p>AltEx obtains Serbia business license</p>
-                                </div>
-                                <i class="step-line"></i>
-                                <div class="date">2017.03</div>
-                            </div>
-                            <div class="steps-container">
-                                <div class="content">
-                                <h2></h2>
-                                <p>AltEx exchange goes online</p>
-                                </div>
-                                <i class="step-line"></i>
-                                <div class="date">2018.02</div>
-                            </div>
-                            <div class="steps-container">
-                                <div class="content">
-                                <h2></h2>
-                                <p>AltEx obtains investment from top capital institutions</p>
-                                </div>
-                                <i class="step-line"></i>
-                                <div class="date">2020.12</div>
-                            </div>
-                            <div class="steps-container">
-                                <div class="content">
-                                <h2></h2>
-                                <p>AltEx global users exceed 5 million</p>
-                                </div>
-                                <i class="step-line"></i>
-                                <div class="date">2021.12</div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>             
-                        </v-col>
-                        <v-col>
-                        </v-col>
-                    </v-row>
-                </v-container>
-            </section>
+            <v-footer style="background-color:#1f2630;" padless>
+                <v-col
+                class="text-center"
+                style="color:white"
+                >
+                {{ new Date().getFullYear() }} — <strong style="color:white">Altex</strong>
+                </v-col>
+                <v-col cols="12" md="3">
+                    <a @click="$router.push('privacy-policy')" style="color:rgba(248,217,75, 0.8)">{{myJson.privacy_policy}}</a>
+                </v-col> 
+                  
+            </v-footer>
+
+            
+
+            
 
             
 
@@ -733,121 +715,21 @@
 </template>
 
 <style>
-
-body {
-  background: #1f2630;
-  }
-
-:root {
-  --primary:#1f2630 ;
-}
-.section-header {
-  text-align: center;
-}
-.section-header h2 {
-  font-size: 28px;
-  font-weight: 700;
-}
-.section-header hr {
-  border: 1px solid #fff;
-  width: 56px;
-}
-.bg-gradient_solid {
-  background: var(--primary-gradient);
-  color: #fff;
-  padding: 48px 0;
-}
-.steps {
-  position: relative;
-  margin-top: 32px;
-}
-.steps::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  background-color: white;
-  opacity: 0.4;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-}
-
-.steps .content p {
-  color: white;
-  font-size: 0;
-}
-
-.steps .content h2 {
-  font-weight: 600;
-  font-size: 16px;
-  color: #676767;
-}
-
-.steps-container {
-  position: relative;
-  background-color: inherit;
-  width: calc(50% + 32px);
-}
-
-.steps-container .content {
-  padding: 32px;
-  background-color: rgba(248,217,75, 0.8);
-  position: relative;
-  border-radius: 0px 0px 80px 0px;
-  box-shadow: 0px 16px 27px rgb(0 11 30 / 10%);
-}
-
-.steps .steps-container:nth-child(even) {
-  left: calc(50% - 32px);
-  flex-direction: row-reverse;
-}
-
-.steps-container {
-  display: flex;
-}
-
-.steps .steps-container .date {
-  font-weight: 900;
-  font-size: 16px;
-  color: #ffffff;
-  margin-bottom: 10px;
-  width: 70px;
-  height: 70px;
-  background-color: var(--primary);
-  border-radius: 50%;
-  flex-shrink: 0;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  z-index: 1  ;
-}
-
-.step-line {
-  width: 40px;
-  background-color: #fff;
-  height: 1px;
-  margin-top: 31px;
-  opacity: 0.4;
-  flex-shrink: 0;
-}
-
-@media (max-width: 767px) {
-  .steps::after {
-    left: 32px;
-  }
-  .steps-container {
-    left: 0;
-    flex-direction: row-reverse;
-    width: auto;
-    margin-bottom: 16px;
-  }
-  .steps .steps-container:nth-child(even) {
-    left: 0;
-  }
-}
+    body{
+        background-color: #1f2630;
+    }
 </style>
 
 <script>
+
+import enJson from './language/en.json'
+import jpJson from './language/japan.json'
+import spJson from './language/spanish.json'
+import thaiJson from './language/thai.json'
+import vietJson from './language/viet.json'
+
+
+
 export default {
     name: "app",
     data() {
@@ -856,26 +738,7 @@ export default {
             userId: sessionStorage.getItem("user-id"),
             color: "",
             flat: null,
-            hospital: { id: 1025167, lat: 6.9214, lng: 122.075 },
-            hospitals: [
-                { id: 1025167, lat: 6.9214, lng: 122.075 },
-                { id: 1025168, lat: 6.9225, lng: 122.0771 },
-                { id: 1025169, lat: 6.9246, lng: 122.0712 },
-                { id: 1025170, lat: 6.9237, lng: 122.0783 },
-                { id: 1025171, lat: 6.9258, lng: 122.0794 }
-            ],
-            hospitalsLatLng: [
-                { id: 1025167, lat: 6.9214, lng: 122.075 },
-                { id: 1025168, lat: 6.9225, lng: 122.0771 },
-                { id: 1025169, lat: 6.9246, lng: 122.0712 },
-                { id: 1025170, lat: 6.9237, lng: 122.0783 },
-                { id: 1025171, lat: 6.9258, lng: 122.0794 }
-            ],
-            //Google Maps Variables
-            center: { lat: 6.9214, lng: 122.079 },
-            address: { lat: 6.9214, lng: 122.079 },
-            //Modals
-            hospitalDialog: false
+            myJson: {},
         };
     },
 
@@ -972,24 +835,25 @@ export default {
     },
 
     created() {
-        this.toTop();
-        const top = window.pageYOffset || 0;
-        if (top <= 60) {
-            this.color = "transparent";
-            this.flat = true;
+        if(sessionStorage.getItem("language") == 'jp')
+        {
+            this.myJson = jpJson
         }
-        this.fetchHospitals();
+        else if(sessionStorage.getItem("language") == 'thai')
+        {
+            this.myJson = thaiJson
+        }
+        else if(sessionStorage.getItem("language") == 'spanish')
+        {
+            this.myJson = spJson
+        }
+        else if(sessionStorage.getItem("langauge") == 'vietnam')
+        {
+            this.myJson = vietJson
+        }else
+        {
+            this.myJson = enJson
+        }
     },
-
-    beforeRouteEnter(to, from, next) {
-        // if (sessionStorage.getItem("user-type")) {
-        //     if (sessionStorage.getItem("user-type") == "ADMINISTRATOR") {
-        //         return next("admin/dashboard");
-        //     } else if (sessionStorage.getItem("user-type") == "SUBSCRIBER") {
-        //         return next("/dashboard");
-        //     }
-        // }
-        next();
-    }
 };
 </script>
