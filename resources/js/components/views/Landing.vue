@@ -457,10 +457,8 @@
 
             <section style="background-color:#1f2630" class="hero-section" id="agency"  v-if="!userId">
                 <v-container>
-                    <v-row justify="center" class="align-items-center">
-                    
+                    <v-row justify="center" class="align-items-center">    
                         <v-row>
-
                         <center><h3 justify="center" class="align-items-center" style="color:rgba(248,217,75, 0.8)">{{myJson.cooperative_agency}}</h3>
                         </center>   
                         <v-col></v-col>
@@ -514,17 +512,6 @@
                             <img
                                         width="120%"
                                         src="svg/partner-md-e.png"
-                                        alt="Image"
-                                        data-aos="fade-right"
-                                    />
-                        </center>
-                                
-                        </v-col>
-                        <v-col cols="12" md="2">
-                        <center>
-                            <img
-                                        width="200%"
-                                        src="svg/logo-5th.svg"
                                         alt="Image"
                                         data-aos="fade-right"
                                     />

@@ -23,53 +23,53 @@ class UserTableSeeder extends Seeder
         ]);
 
         /** Customer */
-        $userHospital = User::create([
-            'username' => 'hospital',
-            'password' => 'hospital',
-            'username' => 'hospital',
-            'role' => 'HOSPITAL',
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+        // $userHospital = User::create([
+        //     'username' => 'hospital',
+        //     'password' => 'hospital',
+        //     'username' => 'hospital',
+        //     'role' => 'HOSPITAL',
+        //     'created_at' => now(),
+        //     'updated_at' => now()
+        // ]);
 
-        $hospital =  Hospital::create([
-            'name' => 'EJ Lumata',
-            'number' => '09664375522',
-            'user_id' => $userHospital->id,
-            'address' => 'Pasonanca, Zamboanga City',
-            'status' => 'RECIEVING',
-            'longitude' => 122.079,
-            'latitude' => 6.9214,
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+        // $hospital =  Hospital::create([
+        //     'name' => 'EJ Lumata',
+        //     'number' => '09664375522',
+        //     'user_id' => $userHospital->id,
+        //     'address' => 'Pasonanca, Zamboanga City',
+        //     'status' => 'RECIEVING',
+        //     'longitude' => 122.079,
+        //     'latitude' => 6.9214,
+        //     'created_at' => now(),
+        //     'updated_at' => now()
+        // ]);
 
-        $hospitalRoom = \App\HospitalRoom::create([
-            'hospital_id' => $hospital->id,
-            'room_no' => 'ROOM 1',
-            'status' => 'VACANT',
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+        // $hospitalRoom = \App\HospitalRoom::create([
+        //     'hospital_id' => $hospital->id,
+        //     'room_no' => 'ROOM 1',
+        //     'status' => 'VACANT',
+        //     'created_at' => now(),
+        //     'updated_at' => now()
+        // ]);
 
-        $occupantUser = User::create([
-            'username' => 'occupant',
-            'password' => 'occupant',
-            'role' => 'OCCUPANT',
-            'created_at' => now(),
-            'updated_at' => now()
-        ]);
+        // $occupantUser = User::create([
+        //     'username' => 'occupant',
+        //     'password' => 'occupant',
+        //     'role' => 'OCCUPANT',
+        //     'created_at' => now(),
+        //     'updated_at' => now()
+        // ]);
 
-        $occupant = \App\Occupant::create([
-            'name' => 'Alfadzry Jumli',
-            'user_id' => $occupantUser->id,
-            'status' => 'COVID',
-            'type' => 'ADMITTED',
-            'number' => '09664375522',
-            'address' => 'Dito lang sa tabe',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        // $occupant = \App\Occupant::create([
+        //     'name' => 'Alfadzry Jumli',
+        //     'user_id' => $occupantUser->id,
+        //     'status' => 'COVID',
+        //     'type' => 'ADMITTED',
+        //     'number' => '09664375522',
+        //     'address' => 'Dito lang sa tabe',
+        //     'created_at' => now(),
+        //     'updated_at' => now(),
+        // ]);
 
         // $roomRequest = \App\RoomRequest::create([
         //     'hospital_room_id' => $hospitalRoom->id,
